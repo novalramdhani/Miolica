@@ -1,3 +1,3 @@
-# Ethereum
+# Dev
 
-Laravel API, Sanctum, GraphQL with React Migration.
+Laravel API, Sanctum, GraphQL with React Migration Scaffolding.
