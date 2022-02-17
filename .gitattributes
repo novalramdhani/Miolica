@@ -1,5 +1,6 @@
 * text=auto
 
+*.php diff=php
 *.jsx diff=js 
 *.tsx diff=ts
 *.blade.php diff=html

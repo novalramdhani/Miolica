@@ -1,3 +1,13 @@
-# Dev
+# DevStore
 
-Laravel API, Sanctum, GraphQL with React Migration Scaffolding.
+## Demo App
+
+## DevStore Workflow
+
+## DevStore Tech Stack
+
+## Team & Contributors
+
+## Code Of Conduct
+
+## License
