@@ -27,6 +27,7 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
 ## Team & Contributors
 
 ## Code Of Conduct
+Please review and abide by the [Code of Conduct]().
 
 ## License
 This project is license under of [MIT License]().
