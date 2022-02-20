@@ -1,10 +1,10 @@
-# DevStore
+# MioLica
 
 ## Demo App
 
-## DevStore Workflow
+## MioLica Workflow
 
-## DevStore Tech Stack
+## MioLica Tech Stack
 
 ## Team & Contributors
 
