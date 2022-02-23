@@ -25,7 +25,7 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
     - Sanctum (API token)
 
 ## Team & Contributors
-<table>
+<table align="center">
   <tbody>
     <tr>
       <td align="center" valign="top">
@@ -40,7 +40,8 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
         <img width="150" height="150" src="https://github.com/andrianfaa.png?s=150">
         <br>
         <a href="https://github.com/andrianfaa">Andrian Fadhilla</a>
-        <p>UI/UX Designer & Front End Developer</p>
+        <p>UI/UX Designer <br>
+            & Front End Developer</p>
         <br>
         <p>Working on frontend</p>
       </td>
