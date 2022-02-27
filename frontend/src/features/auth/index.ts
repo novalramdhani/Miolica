@@ -1,1 +1,3 @@
-export * from './slice/authSlice';
+export * from './slice';
+
+export { default as authSlice } from './slice';
