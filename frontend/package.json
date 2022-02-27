@@ -4,34 +4,40 @@
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.7.2",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.0.0",
-    "@testing-library/user-event": "^13.2.1",
-    "@types/jest": "^27.4.0",
-    "@types/node": "^17.0.18",
-    "@types/react": "^17.0.39",
-    "@types/react-dom": "^17.0.11",
-    "@types/react-helmet": "^6.1.5",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "@types/jest": "^26.0.15",
+    "@types/node": "^12.0.0",
+    "@types/react": "^16.9.53",
+    "@types/react-dom": "^16.9.8",
     "@types/react-redux": "^7.1.22",
     "@types/react-router-dom": "^5.3.3",
-    "axios": "^0.26.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-helmet": "^6.1.0",
-    "react-icons": "^4.3.1",
     "react-redux": "^7.2.6",
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
-    "typescript": "^4.5.5",
-    "web-vitals": "^2.1.0"
+    "typescript": "^4.0.3",
+    "web-vitals": "^0.2.4",
+    "workbox-background-sync": "^5.1.3",
+    "workbox-broadcast-update": "^5.1.3",
+    "workbox-cacheable-response": "^5.1.3",
+    "workbox-core": "^5.1.3",
+    "workbox-expiration": "^5.1.3",
+    "workbox-google-analytics": "^5.1.3",
+    "workbox-navigation-preload": "^5.1.3",
+    "workbox-precaching": "^5.1.3",
+    "workbox-range-requests": "^5.1.3",
+    "workbox-routing": "^5.1.3",
+    "workbox-strategies": "^5.1.3",
+    "workbox-streams": "^5.1.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/**/*.{ts,tsx}",
-    "lint:fix": "eslint --fix ./src/**/*.{ts,tsx}"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
@@ -52,14 +58,16 @@
     ]
   },
   "devDependencies": {
-    "@typescript-eslint/eslint-plugin": "^5.12.0",
-    "@typescript-eslint/parser": "^5.12.0",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
     "autoprefixer": "^10.4.2",
-    "eslint": "^8.9.0",
+    "eslint": "^8.10.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-react": "^7.28.0",
-    "postcss": "^8.4.6",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.29.2",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "postcss": "^8.4.7",
     "tailwindcss": "^3.0.23"
   }
 }
