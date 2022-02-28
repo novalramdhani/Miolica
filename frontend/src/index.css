@@ -3,6 +3,24 @@
 @tailwind variants;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Neue Machina'), local('NeueMachina'),
+    url('./assets/fonts/NeueMachina-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: local('Neue Machina'), local('NeueMachina'),
+    url('./assets/fonts/NeueMachina-Ultrabold.otf') format('opentype');
+}
+
 #root {
   @apply min-h-screen;
 }
@@ -12,20 +30,31 @@
     font-family: 'Poppins', --apple-system, BlinkMacSystemFont, 'Segoe UI',
       Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
       sans-serif;
+    @apply text-custom-black-400 tracking-tight text-base;
+    @apply bg-custom-white-900;
+  }
+
+  a,
+  button {
+    @apply cursor-pointer;
+  }
+
+  h1 {
+    @apply font-semibold text-4xl md:text-5xl lg:text-6xl;
   }
 }
 
 @layer components {
   .app-container {
-    @apply w-full max-w-screen-xl mx-auto px-6;
+    @apply w-full max-w-[1440px] mx-auto px-6;
   }
 
   /* Button */
   .btn {
     @apply transition-all duration-300 ease-in-out;
-    @apply py-3 px-6 bg-custom-black-900 text-white font-medium text-sm md:text-base border border-none;
+    @apply py-3 px-6 bg-custom-black-900 text-white font-medium text-sm md:text-base border-2 border-transparent;
     @apply hover:bg-neutral-700;
-    @apply focus:bg-transparent focus:text-custom-black focus:border-black;
+    @apply focus:bg-transparent focus:text-custom-black-900 focus:border-custom-black-900;
   }
 
   .btn-outline {
@@ -37,19 +66,178 @@
 
   /* Navbar */
   .navbar {
-    @apply bg-gray-200 w-full absolute top-0 left-0 z-50;
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply bg-transparent w-full absolute top-0 left-0 z-50;
+  }
+
+  .navbar.scrolled {
+    animation: navbar-scrolled 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    @apply bg-custom-white-900 fixed top-0 border-b border-custom-white-800;
   }
 
   .navbar > .navbar-container {
-    @apply h-[75px] w-full max-w-screen-xl flex items-center justify-between px-6 mx-auto;
+    @apply h-[75px] w-full max-w-[1440px] flex items-center justify-between px-6 mx-auto;
   }
 
-  .navbar > .navbar-container > .navbar-menu {
-    @apply absolute -z-[65] left-0 top-0 w-full h-screen opacity-0 invisible;
-    @apply md:static md:w-auto md:h-auto md:opacity-100 md:visible;
+  .navbar-menu {
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-berzier(0.4, 0, 0.2, 1);
+    @apply absolute z-[-5] left-0 top-0 w-full h-screen opacity-0 invisible overflow-hidden;
+    @apply md:static md:w-auto md:z-[unset] md:h-auto md:opacity-100 md:visible;
   }
 
-  .navbar > .navbar-container > .navbar-menu.active {
-    @apply opacity-100 visible bg-black bg-opacity-50 md:bg-transparent;
+  .navbar-menu.active {
+    @apply opacity-100 visible bg-black bg-opacity-25 md:bg-transparent;
+  }
+
+  .navbar-menu > ul {
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply absolute z-10 -right-[275px] top-0 h-screen overflow-y-auto bg-custom-white-900 w-full max-w-[250px] pt-[75px];
+    @apply md:static md:right-[unset] md:top-[unset] md:bg-transparent md:w-auto md:max-w-[unset] md:h-auto md:flex md:items-center md:gap-6 md:pt-0;
+  }
+
+  .navbar-menu > ul.active {
+    @apply right-0;
+  }
+
+  .navbar-menu > ul > li > a {
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply py-3 px-6 block relative;
+    @apply md:py-1 md:px-1 lg:px-2;
+  }
+
+  .navbar-menu > ul > li > a::before {
+    content: '';
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply absolute z-10 bottom-1.5 left-6 w-0 h-[.1rem] bg-custom-black-900;
+    @apply md:left-1 lg:left-2 md:bottom-0;
+  }
+
+  .navbar-menu > ul > li > a.active {
+    @apply text-custom-black-900;
+  }
+
+  .navbar-menu > ul > li > a.active::before {
+    @apply w-8;
+  }
+
+  .navbar-burger {
+    @apply cursor-pointer relative;
+    @apply transition-all duration-300 ease-in-out;
+    @apply flex items-center justify-center;
+    @apply h-10 w-10;
+    @apply md:hidden;
+  }
+
+  .navbar-burger > span {
+    @apply transition-all duration-500;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    @apply w-6 h-[0.1rem] bg-custom-black-900 absolute;
+  }
+
+  .navbar-burger > span:nth-child(1) {
+    animation: navbar-burger-icon-1 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .navbar-burger.active > span:nth-child(1) {
+    animation: navbar-burger-icon-1\:active 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+      forwards;
+  }
+
+  .navbar-burger.active > span:nth-child(2) {
+    @apply w-0;
+  }
+
+  .navbar-burger > span:nth-child(3) {
+    animation: navbar-burger-icon-3 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    @apply w-4 ml-2;
+  }
+
+  .navbar-burger.active > span:nth-child(3) {
+    animation: navbar-burger-icon-3\:active 0.5s cubic-bezier(0.4, 0, 0.2, 1)
+      forwards;
+  }
+}
+
+/* Custom Background */
+.bg-noise-pink {
+  background-image: url('./assets/img/bg-noise-pink.jpg');
+  background-size: cover;
+}
+
+.bg-noise-white {
+  background-image: url('./assets/img/bg-noise-white.jpg');
+  background-size: cover;
+}
+
+.bg-noise-black {
+  background-image: url('./assets/img/bg-noise-black.jpg');
+  background-size: cover;
+}
+
+/* Animation */
+@keyframes navbar-scrolled {
+  0% {
+    transform: translateY(-75px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar-burger-icon-1 {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-0.4rem) rotate(0);
+  }
+}
+
+@keyframes navbar-burger-icon-1\:active {
+  0% {
+    transform: translateY(-0.4rem) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes navbar-burger-icon-3 {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    width: 1.5rem;
+    margin-left: 0;
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0.4rem) rotate(0);
+  }
+}
+
+@keyframes navbar-burger-icon-3\:active {
+  0% {
+    transform: translateY(0.4rem) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+    width: 1.5rem;
+    margin-left: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+    width: 1.5rem;
+    margin-left: 0;
   }
 }

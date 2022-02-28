@@ -21,6 +21,10 @@ export default function NavbarMenu({ state, onClose }: NavbarMenuType) {
       href: '/about',
     },
     {
+      title: 'Shop',
+      href: '/shop',
+    },
+    {
       title: 'Contact',
       href: '/contact',
     },
