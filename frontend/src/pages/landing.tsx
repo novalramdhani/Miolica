@@ -1,8 +1,6 @@
 import React from 'react';
 import LoadingBar from 'react-top-loading-bar';
 
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
-
 import {
   useAppDispatch, useAppSelector, increment, decrement, reset,
 } from '../app';
@@ -28,7 +26,6 @@ function Landing() {
       <LoadingBar color="#0a0c0f" height={5} shadow={false} ref={ref} />
 
       <div id="appContainer" className="p-6 flex flex-col items-center justify-center min-h-screen">
-        <Logo className="w-32 absolute top-0 md:top-6" />
 
         <h1 className="font-syne font-bold text-4xl text-center mb-6">Counter</h1>
         <p className="text-xl mb-8">

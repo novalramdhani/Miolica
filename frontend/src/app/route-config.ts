@@ -1,6 +1,7 @@
 /* eslint-disable import/prefer-default-export */
 /* eslint-disable no-undef */
 import Landing from 'pages/landing';
+import Login from 'pages/login';
 
 import { PrivateRouteType, PublicRouteType } from './types';
 
@@ -12,6 +13,10 @@ const PublicRoutes: PublicRouteType[] = [
   {
     path: '/',
     element: Landing,
+  },
+  {
+    path: '/login',
+    element: Login,
   },
 ];
 

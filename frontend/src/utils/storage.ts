@@ -4,6 +4,7 @@ const SessionStorage = {
   getValue<T>(key: string): T | null {
     try {
       const item = window.sessionStorage.getItem(key);
+
       return item ? JSON.parse(item) : null;
     } catch (error) {
       return null;

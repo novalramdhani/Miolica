@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { Storage } from '../../utils';
+import { Storage } from 'utils';
 
 interface AuthSliceState {
   token?: string | null;
@@ -12,7 +12,7 @@ const { SessionStorage, LocalStorage } = Storage;
 const authSlice = createSlice({
   name: 'auth',
   initialState: {
-    token: SessionStorage.getValue<string>('token') || null,
+    token: SessionStorage.getValue('token') || null,
     uid: null,
     isAuthenticated: false,
   } as AuthSliceState,
