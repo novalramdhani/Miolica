@@ -6,9 +6,9 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
 - Backend App: []()
 
 ## MioLica Resources
-1. Database Design: []()
-2. Figma Design: []()
-3. API Documentation: []()
+1. Database Design: [Click Here](https://dbdiagram.io/d/620e660e485e433543cee43a)
+2. Figma Design: [Click Here](https://www.figma.com/file/Rt1alvAw8zJNDSxnNGxrWi/Miolica-Store?node-id=0%3A1)
+3. API Documentation: [Coming Soon]()
 
 ## MioLica Tech Stack
 1. Frontend
@@ -20,7 +20,8 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
 2. Backend
     - PHP
     - Laravel (Only API)
-    - Postgre SQL
+    - PostgreSQL
+    - MongoDB
     - GraphQL
     - Sanctum (API token)
 
@@ -49,12 +50,8 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
   </tbody>
 </table>
 
-Thank you for participating in contributing to this project, here is a list of all contributors.
-
-<a href="https://github.com/novalramdhani/Miolica/graphs/contributors"><img src="https://contrib.rocks/image?repo=novalramdhani/Miolica" alt="All of amazing contributors"></a>
-
 ## Code Of Conduct
-Please review and abide by the [Code of Conduct]().
+Please review and abide by the [Code of Conduct](https://github.com/novalramdhani/Miolica/blob/main/CODE_OF_CONDUCT.md).
 
 ## License
-This project is license under of [MIT License]().
+This project is license under of [MIT License](https://github.com/novalramdhani/Miolica/blob/main/LICENSE).
