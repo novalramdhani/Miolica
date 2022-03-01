@@ -1,0 +1,18 @@
+/* Button */
+.btn {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  @apply py-3 px-6 bg-custom-black-900 text-white font-medium text-sm md:text-base border-2 border-transparent;
+  @apply hover:bg-neutral-700;
+  @apply focus:bg-transparent focus:text-custom-black-900 focus:border-custom-black-900;
+
+  &-outline {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    @apply py-3 px-6 bg-transparent text-black border border-custom-black-900 font-medium text-sm md:text-base;
+    @apply hover:bg-neutral-200;
+    @apply focus:bg-custom-black-900 focus:text-white;
+  }
+
+  &-default {
+    @apply py-3 px-6 font-medium;
+  }
+}

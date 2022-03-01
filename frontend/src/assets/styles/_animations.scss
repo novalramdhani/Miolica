@@ -1,0 +1,65 @@
+/*
+Navbar Animation
+*/
+@keyframes navbar-scrolled {
+  0% {
+    transform: translateY(-75px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes navbar-burger-icon-1 {
+  0% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-0.4rem) rotate(0);
+  }
+}
+
+@keyframes navbar-burger-icon-1\:active {
+  0% {
+    transform: translateY(-0.4rem) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+}
+
+@keyframes navbar-burger-icon-3 {
+  0% {
+    transform: translateY(0) rotate(45deg);
+    width: 1.5rem;
+    margin-left: 0;
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0.4rem) rotate(0);
+  }
+}
+
+@keyframes navbar-burger-icon-3\:active {
+  0% {
+    transform: translateY(0.4rem) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(0deg);
+    width: 1.5rem;
+    margin-left: 0;
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+    width: 1.5rem;
+    margin-left: 0;
+  }
+}

@@ -2,8 +2,8 @@
 import {
   BaseQueryFn, fetchBaseQuery, FetchBaseQueryError, FetchArgs,
 } from '@reduxjs/toolkit/query/react';
-import type { RootState } from '../app';
-import { logout } from '../features/auth';
+import type { RootState } from 'app';
+import { logout } from 'features/auth';
 
 const baseUrl: string = process.env.REACT_APP_API_URL || '';
 

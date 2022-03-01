@@ -3,18 +3,27 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { routes as AppRoutes } from 'app';
 
+import Error404 from 'pages/404';
+import { Navbar } from 'components';
+
 function Router() {
-  const {
-    PublicRoutes,
-  } = AppRoutes;
+  const { PublicRoutes } = AppRoutes;
 
   return (
     <BrowserRouter>
+      <Navbar />
+
       <Routes>
 
-        {PublicRoutes.map((route) => (
-          <Route key={route.path} path={route.path} element={<route.element />} />
+        {PublicRoutes.flatMap((route) => (
+          <Route
+            key={route.path}
+            path={route.path}
+            element={<route.element />}
+          />
         ))}
+
+        <Route path="*" element={<Error404 />} />
 
       </Routes>
     </BrowserRouter>
