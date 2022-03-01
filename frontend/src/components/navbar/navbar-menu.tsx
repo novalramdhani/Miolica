@@ -39,7 +39,7 @@ export default function NavbarMenu({ state, onClose }: NavbarMenuType) {
 
         {menuItems.flatMap((menu) => (
           <li key={menu.title}>
-            <NavLink to={menu.href}>{menu.title}</NavLink>
+            <NavLink onClick={onClose} to={menu.href}>{menu.title}</NavLink>
           </li>
         ))}
 

@@ -15,11 +15,10 @@ function Landing() {
     <>
       <LoadingBar color="#0a0c0f" height={5} shadow={false} ref={ref} />
 
-      <div id="appContainer" className="p-6 flex flex-col items-center justify-center min-h-screen bg-noise-white">
+      <div id="appContainer" className="p-6 flex flex-col items-center justify-center min-h-screen md:min-h-[unset] md:h-screen max-h-[992px] bg-noise-white">
         <Fade cascade triggerOnce direction="up">
-          <h1 className="sr-only">Wear looks, not outfits.</h1>
 
-          <div className="text-4xl md:text-8xl text-custom-black-900 mb-4">
+          <h1 className="text-custom-black-900 mb-4">
             <span className="font-syne font-semibold">Wear</span>
             {' '}
             <span className="font-neue-machina">Looks</span>
@@ -29,10 +28,10 @@ function Landing() {
             {' '}
             <span className="font-neue-machina">Outfits</span>
             .
-          </div>
+          </h1>
 
           <button
-            className="btn px-8"
+            className="btn px-8 tooltip"
             type="button"
           >
             Shop now
