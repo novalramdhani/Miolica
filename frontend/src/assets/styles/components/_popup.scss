@@ -1,0 +1,35 @@
+@mixin popupContent {
+  @apply bg-custom-white-900 w-full max-h-[80%];
+}
+
+.popup {
+  @include defaultTransition();
+  @apply bg-black bg-opacity-50 fixed opacity-0 invisible top-0 left-0 w-full h-screen flex items-center justify-center z-[60];
+
+  &.active {
+    @apply opacity-100 visible;
+  }
+
+  &-bottom {
+    @include defaultTransition();
+    @apply bg-black bg-opacity-50 fixed opacity-0 invisible top-0 left-0 w-full h-screen flex items-end md:items-center justify-center z-[60];
+
+    .popup-content {
+      @include popupContent;
+      @include defaultTransition();
+      @apply transform translate-y-5;
+    }
+
+    &.active {
+      @apply opacity-100 visible;
+
+      .popup-content {
+        @apply transform translate-y-0;
+      }
+    }
+  }
+
+  &-content {
+    @include popupContent;
+  }
+}

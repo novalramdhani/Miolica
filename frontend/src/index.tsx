@@ -7,7 +7,7 @@ import { store } from 'app';
 
 import * as serviceWorkerRegistration from 'serviceWorkerRegistration';
 import reportWebVitals from 'reportWebVitals';
-import 'index.css';
+import 'assets/styles/index.scss';
 
 ReactDOM.render(
   <React.StrictMode>

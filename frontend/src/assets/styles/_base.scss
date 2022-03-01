@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind variants;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: local('Neue Machina'), local('NeueMachina'),
+    url('../fonts/NeueMachina-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Neue Machina';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 900;
+  src: local('Neue Machina'), local('NeueMachina'),
+    url('../fonts/NeueMachina-Ultrabold.otf') format('opentype');
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+body {
+  @apply text-custom-black-400 tracking-tight text-base font-sans;
+  @apply bg-custom-white-900;
+}
+
+a,
+button {
+  @apply cursor-pointer;
+}
+
+button {
+  @apply select-none;
+}
+
+h1 {
+  @apply text-4xl md:text-5xl lg:text-6xl;
+}
+
+.app-container {
+  @apply w-full max-w-[1440px] mx-auto px-6;
+}
