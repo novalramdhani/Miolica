@@ -2,6 +2,11 @@
 export { ReactComponent as LogoFull } from './logo-full.svg';
 export { ReactComponent as Logo } from './logo-io.svg';
 
+// Images
+export { default as HeroImage1 } from './img/hero-image-1.jpg';
+export { default as HeroImage2 } from './img/hero-image-2.jpg';
+export { default as HeroImage3 } from './img/hero-image-3.jpg';
+
 // Icons
 export { ReactComponent as IconArrow } from './icons/ic-arrow-up.svg';
 export { ReactComponent as IconCheck } from './icons/ic-check.svg';
