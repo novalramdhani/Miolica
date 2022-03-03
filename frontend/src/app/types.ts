@@ -1,7 +1,4 @@
 /* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
-import React from 'react';
-
 export interface HttpResponse<T> {
   data?: T;
   statusCode: number;
@@ -21,3 +18,5 @@ export interface PublicRouteType {
   path: string;
   element: () => JSX.Element;
 }
+
+export type RouteType = PublicRouteType | PrivateRouteType;
