@@ -19,11 +19,12 @@ export default function Navbar({
   const [isProfileMenuOpened, setIsProfileMenuOpened] = React.useState<boolean>(false);
 
   const renderLogo = () => {
+    const logoClassName = 'navbar-logo h-11 w-[auto] text-custom-black-900';
     if (getBreakpoint() === 'xs' || getBreakpoint() === 'sm' || getBreakpoint() === 'md') {
-      return <Logo className="navbar-logo h-11 w-[auto] text-custom-black-900" />;
+      return <Logo className={logoClassName} />;
     }
 
-    return <LogoFull className="navbar-logo h-11 w-[auto] text-custom-black-900" />;
+    return <LogoFull className={logoClassName} />;
   };
 
   const toggleBodyScroll = (isOpen: boolean) => {

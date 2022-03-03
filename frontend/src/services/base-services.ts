@@ -5,7 +5,7 @@ import {
 import type { RootState } from 'app';
 import { logout } from 'features/auth';
 
-const baseUrl: string = process.env.REACT_APP_API_URL || 'https://random-data-api.com/api'; // Only for testing
+const baseUrl: string = process.env.REACT_APP_API_URL || ''; // Only for testing
 
 const baseQuery = fetchBaseQuery({
   baseUrl,
