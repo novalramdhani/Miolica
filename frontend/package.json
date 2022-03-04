@@ -39,12 +39,11 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "run-s build:sass build:app clean",
+    "build": "run-s build:sass build:app",
     "build:app": "react-scripts build",
-    "build:sass": "sass src/assets/styles/index.scss:src/assets/styles/style.css --no-source-map",
+    "build:sass": "sass src/assets/styles/root.scss:src/assets/styles/style.css --no-source-map",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "clean": "rm -rf src/assets/styles/style.css"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
