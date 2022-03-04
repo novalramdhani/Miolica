@@ -2,6 +2,7 @@ import React from 'react';
 
 interface UseSliderPropTypes {
   ref: React.RefObject<HTMLElement> | React.RefObject<HTMLDivElement> | null;
+  isLoadingData?: boolean;
 }
 
 /**
@@ -12,6 +13,7 @@ interface UseSliderPropTypes {
  */
 export default function useSlider({
   ref,
+  isLoadingData = true,
 }: UseSliderPropTypes) {
   const [sliderPositionX, setSliderPositionX] = React.useState<number>(0);
   const [sliderScrollWidth, setSliderScrollWidth] = React.useState<number>(0);
@@ -30,8 +32,8 @@ export default function useSlider({
         slider.scrollTo(sliderPositionX + scrollNumber, 0);
       }
 
-      if (slider.scrollLeft + scrollNumber > sliderScrollWidth) {
-        setSliderPositionX(slider.scrollWidth);
+      if (slider.scrollLeft + scrollNumber >= sliderScrollWidth) {
+        setSliderPositionX(slider.scrollWidth - slider.clientWidth);
         slider.scrollTo(slider.scrollWidth, 0);
       }
     }
@@ -69,14 +71,14 @@ export default function useSlider({
     const slider = ref?.current;
 
     if (slider) {
-      slider.addEventListener('scroll', handleScroll);
+      slider.removeEventListener('scroll', handleScroll);
       setSliderScrollWidth(slider.scrollWidth - slider.clientWidth);
     }
 
     return () => {
-      slider?.removeEventListener('scroll', handleScroll);
+      ref?.current?.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isLoadingData]);
 
   return {
     nextSlide: next,

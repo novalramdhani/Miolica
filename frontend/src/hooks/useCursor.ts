@@ -21,8 +21,9 @@ export default function useCursor({
     const { clientX, clientY } = event;
 
     if (ref?.current) {
-      ref?.current.style.setProperty('--x', `${clientX}px`);
-      ref?.current.style.setProperty('--y', `${clientY}px`);
+      ref.current.classList.remove('opacity-0');
+      ref.current.style.setProperty('--x', `${clientX}px`);
+      ref.current.style.setProperty('--y', `${clientY}px`);
     }
     // eslint-disable-next-line no-unused-expressions
     onMouseMove && onMouseMove();
