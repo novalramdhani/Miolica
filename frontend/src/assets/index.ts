@@ -7,6 +7,8 @@ export { default as HeroImage1 } from './img/hero-image-1.jpg';
 export { default as HeroImage2 } from './img/hero-image-2.jpg';
 export { default as HeroImage3 } from './img/hero-image-3.jpg';
 export { default as ExampleProductImage } from './img/product-example.jpg';
+export { default as ProductCategoryImageForMen } from './img/product-category-men.png';
+export { default as ProductCategoryImageForWomen } from './img/product-category-women.png';
 
 // Icons
 export { ReactComponent as IconArrow } from './icons/ic-arrow-up.svg';

@@ -28,16 +28,17 @@ function Router() {
 
     const onLeave = () => {
       setShowText(null);
-      cursorRef.current?.style.setProperty('--w', '3rem');
-      cursorRef.current?.style.setProperty('--h', '3rem');
+      cursorRef.current?.style.setProperty('--w', '1.5rem');
+      cursorRef.current?.style.setProperty('--h', '1.5rem');
       cursorRef.current?.classList.add('mix-blend-difference');
       cursorRef.current?.classList.remove('hover');
     };
 
-    const link = document.querySelectorAll('a[href]:not(#product-card)');
+    const links = document.querySelectorAll('a[href]:not(#product-card)');
     const productCards = document.querySelectorAll('#product-card');
+    const buttons = document.querySelectorAll('button');
 
-    link?.forEach((item) => {
+    links?.forEach((item) => {
       item.addEventListener('mouseenter', () => onEnter('Click link'));
       item.addEventListener('mouseleave', onLeave);
     });
@@ -45,6 +46,11 @@ function Router() {
     productCards?.forEach((item) => {
       item.addEventListener('mouseenter', () => onEnter('View Product'));
       item.addEventListener('mouseleave', onLeave);
+    });
+
+    buttons?.forEach((item) => {
+      item.addEventListener('mouseenter', () => cursorRef.current?.style.setProperty('--scale', '0'));
+      item.addEventListener('mouseleave', () => cursorRef.current?.style.setProperty('--scale', '1'));
     });
   };
 
@@ -73,7 +79,7 @@ function Router() {
   return (
     <BrowserRouter>
       <Navbar isScrolled={isScrolled} />
-      <div className="custom-cursor mix-blend-difference" ref={cursorRef}>
+      <div className="custom-cursor mix-blend-difference opacity-0" ref={cursorRef}>
         <span className="absolute-center text-center">{showText || ''}</span>
       </div>
 
