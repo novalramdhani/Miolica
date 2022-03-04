@@ -25,31 +25,6 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
     - GraphQL
     - Sanctum (API token)
 
-## Team & Contributors
-<table align="center">
-  <tbody>
-    <tr>
-      <td align="center" valign="top">
-        <img width="150" height="150" src="https://github.com/novalramdhani.png?s=150">
-        <br>
-        <a href="https://github.com/novalramdhani">Noval Ramdhani</a>
-        <p>Back End Developer</p>
-        <br>
-        <p>Working on backend</p>
-      </td>
-      <td align="center" valign="top">
-        <img width="150" height="150" src="https://github.com/andrianfaa.png?s=150">
-        <br>
-        <a href="https://github.com/andrianfaa">Andrian Fadhilla</a>
-        <p>UI/UX Designer <br>
-            & Front End Developer</p>
-        <br>
-        <p>Working on frontend</p>
-      </td>
-     </tr>
-  </tbody>
-</table>
-
 ## Code Of Conduct
 Please review and abide by the [Code of Conduct](https://github.com/novalramdhani/Miolica/blob/main/CODE_OF_CONDUCT.md).
 
