@@ -17,3 +17,26 @@ Miolica is an e-commerce application that uses React.js as the frontend and Lara
 - [Sanctum](https://laravel.com/docs/9.x/sanctum)
 
 ## How to use Miolica (Only Backend)
+First, clone this repository and then enter the `Miolica/backend` project directory and run the composer package manager command below.
+
+```bash
+composer install && composer update
+```
+
+Second, copy and paste the `.env.example` file and create a new file with the name `.env` for the environment configuration file, or you can use the terminal command below.
+
+```bash
+cp .env.example .env
+```
+
+Third, generate an application key for this backend using the Laravel Artisan command.
+
+```bash
+php artisan key:generate --show
+```
+
+Finally, run Artisan serve command to open local development server with `localhost:8000`.
+
+```bash
+php artisan serve
+```
