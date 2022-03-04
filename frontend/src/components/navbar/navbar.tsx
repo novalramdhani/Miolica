@@ -8,17 +8,23 @@ import {
 import NavbarMenu from './navbar-menu';
 import NavbarProfileMenu from './navbar-profile-menu';
 
-export default function Navbar() {
+interface NavbarPropsType {
+  isScrolled: boolean;
+}
+
+export default function Navbar({
+  isScrolled,
+}: NavbarPropsType) {
   const [isMenuOpened, setIsMenuOpened] = React.useState<boolean>(false);
   const [isProfileMenuOpened, setIsProfileMenuOpened] = React.useState<boolean>(false);
-  const [isScrolled, setIsScrolled] = React.useState<boolean>(false);
 
   const renderLogo = () => {
+    const logoClassName = 'navbar-logo h-11 w-[auto] text-custom-black-900';
     if (getBreakpoint() === 'xs' || getBreakpoint() === 'sm' || getBreakpoint() === 'md') {
-      return <Logo className="navbar-logo h-11 w-[auto] text-custom-black-900" />;
+      return <Logo className={logoClassName} />;
     }
 
-    return <LogoFull className="navbar-logo h-11 w-[auto] text-custom-black-900" />;
+    return <LogoFull className={logoClassName} />;
   };
 
   const toggleBodyScroll = (isOpen: boolean) => {
@@ -48,14 +54,6 @@ export default function Navbar() {
     toggleBodyScroll(!isProfileMenuOpened);
   };
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 75) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
-  });
-
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
@@ -70,7 +68,6 @@ export default function Navbar() {
             className="flex items-center tooltip"
           >
             <IconShoppingBag className="w-5 h-5 text-custom-black-900" />
-
             <p className="tooltip-text-left">
               Shopping bag
             </p>
@@ -80,7 +77,6 @@ export default function Navbar() {
             className="flex items-center tooltip"
           >
             <IconLove className="w-5 h-5 text-custom-black-900" />
-
             <p className="tooltip-text-center">
               Liked Product
             </p>
@@ -91,7 +87,6 @@ export default function Navbar() {
             onClick={handleOpenProfileMenu}
           >
             <IconUser className="w-5 h-5 text-custom-black-900" />
-
             <p className="tooltip-text">
               Profile
             </p>
