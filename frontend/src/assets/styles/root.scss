@@ -24,10 +24,11 @@
 }
 
 .custom-cursor {
-  --x: 0;
-  --y: 0;
-  --w: 2rem;
-  --h: 2rem;
+  --x: 50%;
+  --y: 50%;
+  --w: 1.5rem;
+  --h: 1.5rem;
+  --scale: 1;
 
   @apply transition-all duration-100 ease-linear;
   @apply hidden lg:block fixed z-[9999] pointer-events-none rounded-full text-xs text-slate-900 font-semibold;
@@ -35,6 +36,7 @@
   left: var(--x);
   width: var(--w);
   height: var(--h);
+  transform: scale(var(--scale));
   background-color: theme('colors.slate.50');
 
   &.hover {
@@ -83,7 +85,7 @@ button:hover ~ .custom-cursor {
     &-text {
       transition: all 0.3s ease-in-out;
       @apply py-1.5 px-4 text-sm bg-custom-black-500 whitespace-nowrap text-custom-white-900 absolute z-[5] opacity-0 invisible;
-      bottom: -30px;
+      bottom: -20px;
       right: -55%;
 
       &::before {
@@ -96,7 +98,7 @@ button:hover ~ .custom-cursor {
       &-center {
         transition: all 0.3s ease-in-out;
         @apply py-1.5 px-4 text-sm bg-custom-black-500 whitespace-nowrap text-custom-white-900 absolute z-[5] opacity-0 invisible;
-        bottom: -30px;
+        bottom: -20px;
         left: 50%;
         transform: translateX(-50%);
 
@@ -111,7 +113,7 @@ button:hover ~ .custom-cursor {
       &-left {
         transition: all 0.3s ease-in-out;
         @apply py-1.5 px-4 text-sm bg-custom-black-500 whitespace-nowrap text-custom-white-900 absolute z-[5] opacity-0 invisible;
-        bottom: -30px;
+        bottom: -20px;
         left: -55%;
 
         &::before {
@@ -128,8 +130,7 @@ button:hover ~ .custom-cursor {
         &,
         &-center,
         &-left {
-          @apply opacity-100 visible delay-700;
-          bottom: -50px;
+          @apply opacity-100 visible delay-700 -bottom-[50px];
         }
       }
     }
