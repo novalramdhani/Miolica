@@ -23,7 +23,7 @@ if you want to use Miolica Frontend, you need to clone or download the repositor
 $ npm install
 ```
 
-then run the following command in the terminal:
+then run the command below to start the application:
 
 ```
 $ npm start
