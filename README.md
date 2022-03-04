@@ -1,16 +1,16 @@
-# MioLica
+# Miolica
 Miolica is an e-commerce application that uses React.js as the frontend and Laravel as the backend.
 
 ## Demo App
 - Frontend App: []()
 - Backend App: []()
 
-## MioLica Resources
+## Miolica Resources
 1. Database Design: [Click Here](https://dbdiagram.io/d/620e660e485e433543cee43a)
 2. Figma Design: [Click Here](https://www.figma.com/file/Rt1alvAw8zJNDSxnNGxrWi/Miolica-Store?node-id=0%3A1)
 3. API Documentation: [Coming Soon]()
 
-## MioLica Tech Stack
+## Miolica Tech Stack
 1. Frontend
     - Typescript
     - React.js
