@@ -1,4 +1,4 @@
-# Miolica Frontend
+# Miolica Backend
 
 Miolica is an e-commerce application that uses React.js as the frontend and Laravel as the backend.
 
