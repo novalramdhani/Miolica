@@ -14,7 +14,8 @@
         "laravel/sanctum": "^2.14.1",
         "laravel/tinker": "^2.7",
         "mll-lab/laravel-graphql-playground": "^2.6",
-        "nuwave/lighthouse": "^5.41"
+        "nuwave/lighthouse": "^5.41",
+        "spatie/laravel-google-cloud-storage": "^2.0"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
